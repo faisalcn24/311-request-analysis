@@ -1,0 +1,34 @@
+# Raw data — too large to commit (~2 GB, 3.46M rows)
+data/raw/
+
+# All CSVs stay local — the 961 MB cleaned CSV is too big for git.
+# The cleaned dataset is committed as Parquet instead: data/311_cleaned_2024.parquet
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.python
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local SQLite databases built from the cleaned CSV
+*.db
+*.sqlite
+*.sqlite3
+
+# Power BI temp / cache
+*.tmp
+~$*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.claude/
+CLAUDE.md
+prd.md
