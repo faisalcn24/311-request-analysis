@@ -46,6 +46,7 @@ Casing/standardisation rules are applied during cleaning (see `notebooks/01_clea
 | `status` | category | Ticket lifecycle state (e.g. `Closed`, `Open`, `In Progress`). | — |
 | `resolution_description` | string | Free-text describing the action taken to resolve. | — |
 | `resolution_time_hours` | float | **Derived metric.** Hours between created and closed. Null for open tickets. | Negative dropped; capped at 99th percentile |
+| `resolution_category` | category | **Derived.** Outcome parsed from `resolution_description`: `Action/Enforcement`, `No issue found`, `Gone/No access`, `Referred/Info`, `Open/Unresolved`, or `Other` (~17% unclassified long tail). Distinguishes a substantive fix from a fast non-resolution. | Regex on standardised agency templates |
 
 ### Standardised value sets (after cleaning)
 
@@ -107,6 +108,6 @@ Casing/standardisation rules are applied during cleaning (see `notebooks/01_clea
 | `longitude` | ⬇ | Point geometry |
 | `location` | ⬇ | `POINT(long lat)` string; duplicate of lat/long |
 
-**Kept (10 + 1 derived):** `unique_key`, `created_date`, `closed_date`, `agency`,
+**Kept (10 + 2 derived):** `unique_key`, `created_date`, `closed_date`, `agency`,
 `complaint_type`, `descriptor`, `borough`, `incident_zip`, `status`,
-`resolution_description`, **`resolution_time_hours`**.
+`resolution_description`, **`resolution_time_hours`**, **`resolution_category`**.
