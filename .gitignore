@@ -32,3 +32,6 @@ Thumbs.db
 .claude/
 CLAUDE.md
 prd.md
+.mcp.json
+skills-lock.json
+phase3_steps.md

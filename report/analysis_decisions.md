@@ -197,6 +197,17 @@ These went beyond mechanical cleaning and are the real analytical contribution.
 - The cap (290 days) is intentionally loose; it tames the extreme tail but isn't a "typical" value
   — which is exactly why the analysis leads with the median.
 
+### Do-not-report rules for the dashboard/report (so an artifact never becomes a fake insight)
+
+1. **Don't lead with a resolution-time-over-time line chart** — the monthly resolution-time trend is
+   the noisiest series. Trend visuals show *volume* by complaint type; resolution time stays a
+   snapshot/distribution.
+2. **Don't read `0% substantive` as "fixes nothing" for Parks/long-cycle types** (e.g. *New Tree
+   Request*). It's a classifier gap — Parks planting language doesn't match the enforcement regex.
+   For those types the story is the *long cycle*, not effectiveness.
+3. **Cite substantive % as "of classified tickets"** and avoid effectiveness headlines on
+   `Other`-heavy types (e.g. Street Condition ~41% `Other`).
+
 ---
 
 ## 7. Quick-reference: cleaning outcomes
