@@ -138,4 +138,3 @@ cleaned**.
 
 ---
 
-<sub>Portfolio project. Repo: `https://github.com/<your-username>/nyc-311-analytics` *(replace with your URL)*.</sub>
